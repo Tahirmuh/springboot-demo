@@ -1,0 +1,24 @@
+#localhost user and password.
+spring:
+  security:
+    user:
+      name: user
+      password: admin
+
+#disable the whitelabel error page.
+#server:
+#  error:
+#    whitelabel:
+#      enabled: false
+
+#Microsft endpoints properties.
+microsoft:
+  token:
+    client_id: cedebc07-4ac9-41be-9e17-69bb2de63f5e
+    client_secret: iD2MNcV?ePf=xbPQaNpEW76RDSkda+/1
+    endpoint: oauth2/v2.0/token
+    grant_type: client_credentials
+    host: https://login.microsoftonline.com
+    scope: https://graph.microsoft.com/.default
+    tenant: 1f2519d6-a33d-4336-abb5-8085bcb587d6
+    url: ${microsoft.token.host}/${microsoft.token.tenant}/${microsoft.token.endpoint}
